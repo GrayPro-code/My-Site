@@ -1,0 +1,65 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.log
+
+# -------------------------
+# Virtual environments
+# -------------------------
+venv/
+env/
+.venv/
+.env/
+
+# -------------------------
+# Django
+# -------------------------
+*.sqlite3
+db.sqlite3
+
+# Static & media (если собираются локально)
+static/
+staticfiles/
+media/
+
+# Migrations (если хотите хранить — удалите строки)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# -------------------------
+# Environment variables
+# -------------------------
+*.env
+.env.*
+
+# -------------------------
+# PyCharm / JetBrains
+# -------------------------
+.idea/
+*.iml
+# Автоматически генерируемые каталоги
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/dictionaries
+.idea/**/shelf/
+.idea/**/httpRequests/
+
+# -------------------------
+# OS files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Testing / Coverage
+# -------------------------
+.coverage
+htmlcov/
+pytest_cache/
