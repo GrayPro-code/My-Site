@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}
+{% load blog_tags %}
 
 {% block title %}{{ post.title }}{% endblock %}
 
@@ -8,6 +9,40 @@
         Published {{ post.publish }} by {{ post.author }}
     </p>
 
-    {{ post.body|linebreaks }}
+    {{ post.body|markdown }}
 
+    <p class="tags, date">
+        Tags:
+        {% for tag in post.tags.all %}
+            <a class="share-btn" href="{% url "blog:post_list_by_tag" tag.slug %}">
+                {{ tag.name }}
+            </a>
+            {% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    <p>
+        <a href="{% url 'blog:post_share' post.id %}" class="share-btn" style="float:right;">
+               Share this post
+        </a>
+    </p>
+    <h2>Similar posts</h2>
+    {% for post in similar_posts %}
+        <p>
+            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        </p>
+    {% empty %}
+        There are no similar posts yet.
+    {% endfor %}
+    {% with comments.count as total_comments %}
+        <h2>{{ total_comments }} comment{{ total_comments|pluralize }}</h2>
+    {% endwith %}
+    {% for comment in comments %}
+        <div class="comment">
+            <p class="info">Comment {{ forloop.counter }} by {{ comment.name }}{{ comment.created }}</p>
+            {{ comment.body|linebreaks }}
+        </div>
+    {% empty %}
+        <p>There are no comments.</p>
+    {% endfor %}
+    {% include "blog/post/includes/comment_form.html" %}
 {% endblock %}

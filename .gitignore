@@ -23,6 +23,7 @@ env/
 # -------------------------
 *.sqlite3
 db.sqlite3
+settings.py
 
 # Static & media (если собираются локально)
 static/
