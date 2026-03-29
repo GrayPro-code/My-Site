@@ -5,6 +5,7 @@
 
 {% block content %}
     <h1>{{ post.title }}</h1>
+<div class="posts">
     <p class="date">
         Published {{ post.publish }} by {{ post.author }}
     </p>
@@ -22,7 +23,7 @@
     </p>
     <p>
         <a href="{% url 'blog:post_share' post.id %}" class="share-btn" style="float:right;">
-               Share this post
+               🔗 Share this post
         </a>
     </p>
     <h2>Similar posts</h2>
@@ -33,6 +34,7 @@
     {% empty %}
         There are no similar posts yet.
     {% endfor %}
+</div>
     {% with comments.count as total_comments %}
         <h2>{{ total_comments }} comment{{ total_comments|pluralize }}</h2>
     {% endwith %}
