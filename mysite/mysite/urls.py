@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.sitemaps.views import sitemap
+from django.views.generic import RedirectView
 from blog.sitemaps import PostSitemap
 
 sitemaps = {
@@ -25,6 +26,8 @@ sitemaps = {
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Удобный алиас: поиск подключён в blog.urls как blog/search/
+    path('search/', RedirectView.as_view(url='/blog/search/', permanent=False)),
     path('blog/', include('blog.urls', namespace='blog')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
          name='django.contrib.sitemaps.views.sitemap')
