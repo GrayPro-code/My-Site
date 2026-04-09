@@ -1,0 +1,222 @@
+body {
+    margin:0;
+    padding:0;
+    font-family:helvetica, sans-serif;
+}
+
+a {
+    color:#00abff;
+    text-decoration:none;
+    border-radius: 50px;
+    padding: 10px 25px;
+}
+
+h1 {
+    font-weight:normal;
+    border-bottom:2px solid #bbb;
+    padding:0 0 10px 0;
+}
+
+h2 {
+    font-weight:normal;
+    margin:30px 0 0;
+}
+
+#content {
+    margin-top: 20px; 
+    float:left;
+    width:50%;
+    padding:0 0 0 30px;
+}
+
+#sidebar {
+    float:right;
+    width:30%;
+    color: rgb(255, 255, 255);
+    background: rgb(74, 85, 90);
+    height:100%;
+    margin: 20px;
+    border:1px solid #bbb;
+    border-radius: 20px;
+    padding: 12px 28px;
+}
+
+p.date {
+    color:#ccc;
+    font-family: georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* pagination */
+.pagination {
+    margin:40px 0;
+    font-weight:bold;
+}
+
+/* forms */
+label {
+    float:left;
+    clear:both;
+    color:#333;
+    margin-bottom:4px;
+}
+input, textarea {
+    clear:both;
+    float:left;
+    margin:0 0 10px;
+    background:#ededed;
+    border:0;
+    padding:6px 10px;
+    font-size:12px;
+}
+input[type=submit] {
+    font-weight:bold;
+    background:#00abff;
+    color:#fff;
+    padding:10px 20px;
+    font-size:14px;
+    text-transform:uppercase;
+}
+.errorlist {
+    color:#cc0033;
+    float:left;
+    clear:both;
+    padding-left:10px;
+}
+
+/* comments */
+.comment {
+    padding:10px;
+}
+.comment:nth-child(even) {
+    background:#efefef;
+}
+.comment .info {
+    font-weight:bold;
+    font-size:12px;
+    color:#666;
+}
+/* мой код для кнопки поделиться постом */
+.share-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    /* background: linear-gradient(135deg, #6a5af9, #8369ff); */
+    color: red;
+    font-weight: 600;
+    border-radius: 50px; /* делает кнопку круглой */
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(90, 70, 255, 0.35);
+}
+
+.share-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(90, 70, 255, 0.45);
+}
+
+.share-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(90, 70, 255, 0.3);
+}
+
+.posts {
+    display: inline-block;
+    width:92%;
+    border:1px solid #bbb;
+    border-radius: 20px;
+    padding: 12px 28px;
+    margin:0 0 20px;
+    background: linear-gradient(135deg,rgba(100, 255, 255, 0.1),rgba(100, 255, 255, 0.9));
+    box-shadow: 0 4px 14px rgba(90, 70, 255, 0.35);
+}
+
+.posts:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(90, 70, 255, 0.45);
+}
+
+.posts:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(90, 70, 255, 0.3);
+}
+
+/* формы */
+/* Внешний контейнер */
+.block-share {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Заголовки */
+.form-h1 {
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Текст под заголовком */
+.form-p {
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Отступы между полями */
+.form-share p {
+    margin-bottom: 18px;
+}
+
+/* Лейблы */
+.form-share label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+/* Поля ввода */
+.form-share input[type="text"],
+.form-share input[type="email"],
+.form-share textarea {
+    width: 90%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+/* Фокус */
+.form-share input[type="text"]:focus,
+.form-share input[type="email"]:focus,
+.form-share textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74,144,226,0.2);
+    outline: none;
+}
+
+/* Кнопка */
+.form-input {
+    width: 94%;
+    padding: 12px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+    margin-top: 10px;
+}
+
+.form-input:hover {
+    background: #357ABD;
+}
